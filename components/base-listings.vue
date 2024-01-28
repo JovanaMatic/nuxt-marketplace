@@ -6,7 +6,7 @@
         <img :src="`https://img.vast.com/apollo/${listing.id}/1/640x-?format=webp`" />
       </div>
       <div class="p-2">
-        <p>Price: {{ listing.price }}</p>
+        <p>{{ formatPrice(listing.price) ? formatPrice(listing.price) : 'no price' }} | {{ formatPrice(listing.mileage) > 0 ? formatPrice(listing.mileage) : 'no mileage'}}</p>
       </div>
     </NuxtLink>
   </div>
@@ -17,6 +17,9 @@
     listing: Object,
     required: true
   })
+
+  const { formatPrice } = useHelpers()
+  console.log(typeof props.listing.price)
 </script>
 
 <style scoped>
