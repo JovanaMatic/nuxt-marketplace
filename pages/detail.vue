@@ -1,12 +1,10 @@
 <template>
   <div>
-    <SearchForm />
+    <h2>Detail page</h2>
   </div>
 </template>
 
 <script setup>
-import SearchForm from '../components/search-form.vue';
-
 
 </script>
 
