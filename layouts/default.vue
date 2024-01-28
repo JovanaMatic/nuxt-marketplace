@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div class="flex flex-col h-screen justify-between">
+    <div>
     <BaseHeader />
-    <main>
+  </div>
+  <div class="container mx-auto max-w-4xl">
+    <main class="my-10">
       <slot />
     </main>
-    <BaseFooter />
+  </div>
+  <BaseFooter />
   </div>
 </template>
 
