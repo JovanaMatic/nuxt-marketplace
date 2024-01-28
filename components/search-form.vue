@@ -18,19 +18,18 @@
 <script setup>
   const zip = ref(77002)
   const methods = [
-  { value: 'new', label: 'New' },
-  { value: 'used', label: 'Used' },
+  { value: 'New', label: 'New' },
+  { value: 'Used', label: 'Used' },
 ]
 const selected = ref('new')
 
 
 const submitForm = async () => {
- console.log(zip.value, selected.value)
   await navigateTo({
   path: '/cars',
   query: {
-    condition: selected.value,
-    location: zip.value
+    vehicle_condition: selected.value,
+    tlocation: zip.value
   }
 })
 }

@@ -8,13 +8,10 @@
 
 <script setup>
   const route = useRoute()
-  console.log(route.query)
 
-  const { data, pending, error, refresh } = await useFetch('https://dspappfeed.data.auto-prod.vast.com/listings/-/cars?apikey=15141224474137128101237914101551&filter_location_range=n&format=json&include_fields=*', {
-  query: { vehicle_condition: route.query.condition, tlocation: route.query.location }
+  const { data, pending, error, refresh } = await useFetch(`https://dspappfeed.data.auto-prod.vast.com/listings/-/cars?apikey=15141224474137128101237914101551&filter_location_range=n&format=json&include_fields=*`, {
+  query: { ...route.query }
 })
-
-console.log(data.value.results.data)
 
 </script>
 
