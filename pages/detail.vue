@@ -33,7 +33,11 @@ const { formatPrice } = useHelpers()
     query: { ...route.query }
   })
 
-  const listing = data.value.results.data[0]
+  if (error.value) {
+    alert('Something went wrong')
+  }
+
+  const listing = data?.value.results?.data[0]
   console.log(listing.dealer.id)
 </script>
 

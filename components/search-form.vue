@@ -21,10 +21,11 @@
   { value: 'New', label: 'New' },
   { value: 'Used', label: 'Used' },
 ]
-const selected = ref('new')
+const selected = ref('New')
 
 
 const submitForm = async () => {
+  console.log('error')
   await navigateTo({
   path: '/cars',
   query: {
