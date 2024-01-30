@@ -14,8 +14,10 @@
 
 <script setup>
   const props = defineProps({
-    listing: Object,
+    listing: {
+    type: Object,
     required: true
+    }
   })
 
   const { formatPrice } = useHelpers()

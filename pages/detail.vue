@@ -23,6 +23,9 @@
     <div class="middle-section">
       <img :src="`https://img.vast.com/apollo/${listing.id}/1/640x-?format=webp`" />
     </div>
+    <div v-for="listing in data?.results?.data">
+    <DetailFeatures :listing="listing"/>
+  </div>
   </div>
 </template>
 
@@ -38,7 +41,6 @@ const { formatPrice } = useHelpers()
   }
 
   const listing = data?.value.results?.data[0]
-  console.log(listing.dealer.id)
 </script>
 
 <style scoped>
